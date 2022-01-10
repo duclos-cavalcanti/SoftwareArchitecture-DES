@@ -358,59 +358,70 @@ compromising their internals.
 According to POSA2, there are four types of Patterns for Distributed and Embedded
 Applications:
 - <a href="" target="">`Service Access and Configuration Patterns`</a>
-    * The `Wrapper Facade` design pattern encapsulates the functions and data provided by 
-      existing nonobject-oriented APIs within more concise, robust, portable, maintainable, and 
-      cohesive objectoriented class interfaces.
-    * The `Component Configurator` design pattern allows an application to link and unlink its component
-      implementations at run-time without having to modify, recompile, or statically relink the application.
-      Component Configurator further supports the reconfiguration of components into different application
-      processes without having to shut down and re-start running processes.
-    * The `Interceptor` architectural pattern allows services to be added transparently to a framework and
-      triggered automatically when certain events occur.
-    * The `Extension Interface` design pattern allows multiple interfaces to be exported by a component, to
-      prevent bloating of interfaces and breaking of client code when developers extend or modify the
-      functionality of the component.
+    * Configuring interfaces so that different components of the system can be easily added.
+    * Patterns:
+        * The `Wrapper Facade` design pattern encapsulates the functions and data provided by 
+          existing nonobject-oriented APIs within more concise, robust, portable, maintainable, and 
+          cohesive objectoriented class interfaces.
+        * The `Component Configurator` design pattern allows an application to link and unlink its component
+          implementations at run-time without having to modify, recompile, or statically relink the application.
+          Component Configurator further supports the reconfiguration of components into different application
+          processes without having to shut down and re-start running processes.
+        * The `Interceptor` architectural pattern allows services to be added transparently to a framework and
+          triggered automatically when certain events occur.
+        * The `Extension Interface` design pattern allows multiple interfaces to be exported by a component, to
+          prevent bloating of interfaces and breaking of client code when developers extend or modify the
+          functionality of the component.
 
 - <a href="" target="">`Concurrency Patterns`</a>
-    * The `Active Object` design pattern decouples method execution from method invocation to enhance
-      concurrency and simplify synchronized access to objects that reside in their own threads of control.
-    * The `Monitor Object` design pattern synchronizes concurrent method execution to ensure that only one
-      method at a time runs within an object. It also allows an object's methods to cooperatively schedule
-      their execution sequences.
-    * The `Half-Sync/Half-Async` architectural pattern decouples asynchronous and synchronous service
-      processing in concurrent systems, to simplify programming without unduly reducing performance. The
-      pattern introduces two intercommunicating layers, one for asynchronous and one for synchronous
-      service processing.
-    * The `Leader/Followers` architectural pattern that provides an efficient concurrency model where
-      multiple threads take turns sharing a set of event sources in order to detect, demultiplex, dispatch,
-      and process service requests that occur on the event sources.
-    * The `Thread-Specific Storage` design pattern allows multiple threads to use one 'logically global'
-      access point to retrieve an object that is local to a thread, without incurring locking overhead on each
-      object access.
+    * How do you manage events, synchronously and asynchronously. GoF has the 
+      observer pattern that is very similar to these patterns.
+    * Patterns:
+        * The `Active Object` design pattern decouples method execution from method invocation to enhance
+          concurrency and simplify synchronized access to objects that reside in their own threads of control.
+        * The `Monitor Object` design pattern synchronizes concurrent method execution to ensure that only one
+          method at a time runs within an object. It also allows an object's methods to cooperatively schedule
+          their execution sequences.
+        * The `Half-Sync/Half-Async` architectural pattern decouples asynchronous and synchronous service
+          processing in concurrent systems, to simplify programming without unduly reducing performance. The
+          pattern introduces two intercommunicating layers, one for asynchronous and one for synchronous
+          service processing.
+        * The `Leader/Followers` architectural pattern that provides an efficient concurrency model where
+          multiple threads take turns sharing a set of event sources in order to detect, demultiplex, dispatch,
+          and process service requests that occur on the event sources.
+        * The `Thread-Specific Storage` design pattern allows multiple threads to use one 'logically global'
+          access point to retrieve an object that is local to a thread, without incurring locking overhead on each
+          object access.
 
 - <a href="" target="">`Event Handling Patterns`</a>
-    * The `Reactor`architectural pattern allows event-driven applications to demultiplex and dispatch service
-      requests that are delivered to an application from one or more clients.
-    * The `Proactor` architectural pattern allows event-driven applications to efficiently demultiplex and
-      dispatch service requests triggered by the completion of asynchronous operations, to achieve the
-      performance benefits of concurrency without incurring certain of its liabilities.
-    * The `Asynchronous Completion Token` design pattern allows an application to demultiplex and process
-      efficiently the responses of asynchronous operations it invokes on services.
-    * The `Acceptor-Connector` design pattern decouples the connection and initialization of cooperating
-      peer services in a networked system from the processing performed by the peer services after they
-      are connected and initialized.
+    * How can you manage multiple operations that are happening at
+      the same time and how can you make them execute at the same time.
+    * Patterns:
+        * The `Reactor`architectural pattern allows event-driven applications to demultiplex and dispatch service
+          requests that are delivered to an application from one or more clients.
+        * The `Proactor` architectural pattern allows event-driven applications to efficiently demultiplex and
+          dispatch service requests triggered by the completion of asynchronous operations, to achieve the
+          performance benefits of concurrency without incurring certain of its liabilities.
+        * The `Asynchronous Completion Token` design pattern allows an application to demultiplex and process
+          efficiently the responses of asynchronous operations it invokes on services.
+        * The `Acceptor-Connector` design pattern decouples the connection and initialization of cooperating
+          peer services in a networked system from the processing performed by the peer services after they
+          are connected and initialized.
 
 - <a href="" target="">`Synchronization Patterns`</a>
-    * The `Scoped Locking` C++ idiom ensures that a lock is acquired when control enters a scope and
-      released automatically when control leaves the scope, regardless of the return path from the scope.
-    * The `Strategized Locking` design pattern parameterizes synchronization mechanisms that protect a
-      component's critical sections from concurrent access.
-    * The `Thread-Safe Interface` design pattern minimizes locking overhead and ensures that 
-      intracomponent method calls do not incur 'self-deadlock' by trying to reacquire 
-      a lock that is held by the component already.
-    * The `Double-Checked Locking Optimization` design pattern reduces contention and synchronization
-      overhead whenever critical sections of code must acquire locks in a thread-safe manner just once
-      during program execution
+    * How can you manage multiple operations so that they don’t
+      happen at the same or unknown times.
+    * Patterns:
+        * The `Scoped Locking` C++ idiom ensures that a lock is acquired when control enters a scope and
+          released automatically when control leaves the scope, regardless of the return path from the scope.
+        * The `Strategized Locking` design pattern parameterizes synchronization mechanisms that protect a
+          component's critical sections from concurrent access.
+        * The `Thread-Safe Interface` design pattern minimizes locking overhead and ensures that 
+          intracomponent method calls do not incur 'self-deadlock' by trying to reacquire 
+          a lock that is held by the component already.
+        * The `Double-Checked Locking Optimization` design pattern reduces contention and synchronization
+          overhead whenever critical sections of code must acquire locks in a thread-safe manner just once
+          during program execution
 
 <p align="center">
     <img src=".imgs/map.png" alt="Drawing" style="width: 650px;"/>
