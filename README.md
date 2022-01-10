@@ -8,7 +8,13 @@ referral.
 - Some source code examples are taken from [sourcemaking.com](https://sourcemaking.com/)
 - Others are taken from [refactor.guru](https://refactoring.guru/)
 
-This means the source files are not made by me,  please check them out and give them their props!
+This means the source files are not made by me,  please check them out and give them their props! Ultimately the content of the class and the websites themselves are based on:
+
+* [Gang of Four Patterns](https://en.wikipedia.org/wiki/Design_Patterns)
+* [Pattern Oriented Software Architecture](https://en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture) 
+
+In case of `POSA` the chosen edition was `POSA2`.
+
 
 ## Chapter 1: Introduction
 ### Patterns
@@ -49,15 +55,22 @@ According to the GoF, there are three types of Patterns:
     - These are Design Patterns that ease the design by identifying a simple way to
       realize relationships between entities. They are mostly concerned with providing interfaces in a
       suitable form.
+    - Patterns
+        - Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy
 - `Behavioral patterns`
     - These are design patterns that identify common communication patterns
       between objects and realize these patterns. By doing so, these patterns increase flexibility in
       carrying out this communication.
+    - Patterns:
+        - Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento,
+          Observer, State, Strategy, Template Method, Visitor
 - `Creational patterns`
     - These are design patterns that deal with object
       creation mechanisms, trying to create objects in a manner suitable to the situation. The basic form
       of object creation could result in design problems or added complexity to the design. Creational
       design patterns solve this problem by controlling this object creation.
+    - Patterns:
+        - Abstract Factory, Builder, Factory Method, Prototype, Singleton
 
 ### Structural Patterns
 Structural design patterns all deal with enhancing the use of interfaces to achieve certain
@@ -339,3 +352,312 @@ compromising their internals.
   cloning. It allows cloning objects without tight coupling to
   their concrete classes. Usually, the prototype interface
   contains a single clone method.
+
+## Chapter 5: POSA2 Patterns: Intro, WF, Reactor and ACT
+According to POSA2, there are four types of Patterns for Distributed and Embedded
+Applications:
+- <a href="" target="">`Service Access and Configuration Patterns`</a>
+    * The `Wrapper Facade` design pattern encapsulates the functions and data provided by 
+      existing nonobject-oriented APIs within more concise, robust, portable, maintainable, and 
+      cohesive objectoriented class interfaces.
+    * The `Component Configurator` design pattern allows an application to link and unlink its component
+      implementations at run-time without having to modify, recompile, or statically relink the application.
+      Component Configurator further supports the reconfiguration of components into different application
+      processes without having to shut down and re-start running processes.
+    * The `Interceptor` architectural pattern allows services to be added transparently to a framework and
+      triggered automatically when certain events occur.
+    * The `Extension Interface` design pattern allows multiple interfaces to be exported by a component, to
+      prevent bloating of interfaces and breaking of client code when developers extend or modify the
+      functionality of the component.
+
+- <a href="" target="">`Concurrency Patterns`</a>
+    * The `Active Object` design pattern decouples method execution from method invocation to enhance
+      concurrency and simplify synchronized access to objects that reside in their own threads of control.
+    * The `Monitor Object` design pattern synchronizes concurrent method execution to ensure that only one
+      method at a time runs within an object. It also allows an object's methods to cooperatively schedule
+      their execution sequences.
+    * The `Half-Sync/Half-Async` architectural pattern decouples asynchronous and synchronous service
+      processing in concurrent systems, to simplify programming without unduly reducing performance. The
+      pattern introduces two intercommunicating layers, one for asynchronous and one for synchronous
+      service processing.
+    * The `Leader/Followers` architectural pattern that provides an efficient concurrency model where
+      multiple threads take turns sharing a set of event sources in order to detect, demultiplex, dispatch,
+      and process service requests that occur on the event sources.
+    * The `Thread-Specific Storage` design pattern allows multiple threads to use one 'logically global'
+      access point to retrieve an object that is local to a thread, without incurring locking overhead on each
+      object access.
+
+- <a href="" target="">`Event Handling Patterns`</a>
+    * The `Reactor`architectural pattern allows event-driven applications to demultiplex and dispatch service
+      requests that are delivered to an application from one or more clients.
+    * The `Proactor` architectural pattern allows event-driven applications to efficiently demultiplex and
+      dispatch service requests triggered by the completion of asynchronous operations, to achieve the
+      performance benefits of concurrency without incurring certain of its liabilities.
+    * The `Asynchronous Completion Token` design pattern allows an application to demultiplex and process
+      efficiently the responses of asynchronous operations it invokes on services.
+    * The `Acceptor-Connector` design pattern decouples the connection and initialization of cooperating
+      peer services in a networked system from the processing performed by the peer services after they
+      are connected and initialized.
+
+- <a href="" target="">`Synchronization Patterns`</a>
+    * The `Scoped Locking` C++ idiom ensures that a lock is acquired when control enters a scope and
+      released automatically when control leaves the scope, regardless of the return path from the scope.
+    * The `Strategized Locking` design pattern parameterizes synchronization mechanisms that protect a
+      component's critical sections from concurrent access.
+    * The `Thread-Safe Interface` design pattern minimizes locking overhead and ensures that 
+      intracomponent method calls do not incur 'self-deadlock' by trying to reacquire 
+      a lock that is held by the component already.
+    * The `Double-Checked Locking Optimization` design pattern reduces contention and synchronization
+      overhead whenever critical sections of code must acquire locks in a thread-safe manner just once
+      during program execution
+
+<p align="center">
+    <img src=".imgs/map.png" alt="Drawing" style="width: 650px;"/>
+</p>
+
+### Service Access and Configuration Patterns
+#### 1. Wrapper Facade Pattern (Example: Encapsulating Low-Level OS API's)
+* **Summary**:
+    * The `Wrapper Facade` design pattern encapsulates the functions and data provided by 
+      existing nonobject-oriented APIs within more concise, robust, portable, maintainable, and 
+      cohesive objectoriented class interfaces.
+* **Context**:
+    * An IoT logging server must manage a variety of OS services, including processes, threads, socket
+      connections, virtual memory, & files.
+    * Most operating systems provide low-level APIs written in C to access these services
+
+* **Problem**: 
+    * The diversity of hardware & operating systems makes it hard to build portable and robust server
+      software by programming directly to low-level operating system APIs, which are
+    * tedious,
+    * error-prone and
+    * non-portable.
+
+* **Solution**: Applied to avoid accessing low-level operating system APIs directly 
+
+* **Implementation**: 
+    1. Identify the cohesive abstractions and relationships among existing low-level APIs
+    2. Cluster cohesive groups of functions into wrapper facade classes and methods
+    3. Consider allowing applications controlled access to implementation details
+    4. Develop an error-handling mechanism
+    5. Develop related helper classes (optional)
+
+* **Consequences**:
+    * Concise, cohesive & robust higher-level object-oriented programming interfaces
+    * Portability & maintainability
+    * Modularity, reusability & configurability
+    * Loss of functionality
+    * Performance degradation
+    * Programming language & compiler/interpreter limitations
+
+![Diagram](.imgs/wf.png)
+
+#### 2. Component Configurator Pattern
+* **Summary**:
+    * The `Component Configurator` design pattern allows an application to link and unlink its component
+      implementations at run-time without having to modify, recompile, or statically relink the application.
+    * It also further supports the reconfiguration of components into different
+      application processes without having to shut down and re-start running processes.
+* **Context**:
+    * An application or system (e.g. with 24-7 operation) in which components must be initiated,
+      suspended, resumed, and terminated as flexibly and transparently as possible
+
+* **Problem**: 
+    * Changes to component functionality or implementation details are common in many systems
+        * it should be possible at any time to modify component implementation
+    * The most effective way to collocate or distribute components into processes and hosts is often not
+      known
+    * Administrative tasks should be straightforward and component-independent
+
+* **Solution**: 
+    * Decouple component interface from component implementation
+        * A component defines a uniform interface for configuring and controlling
+    * Concrete components are packed into a suitable unit of configuration e.g. a DLL
+    * This DLL can be dynamically linked and unlinked into and out of an application
+
+* **Implementation**: 
+    1. Define the component configuration and control interface
+    2. Implement a component repository
+    3. Implement the component (re)configuration mechanism
+    4. Implement the concrete components
+
+* **Consequences**:
+    * Uniformity
+    * Centralized administration
+    * Modularity, testability & reusability
+    * Configuration dynamism & control
+    * Tuning and optimization
+    * Lack of determinism and ordering dependencies
+    * Reduced security and reliability
+    * Increased run-time overhead and infrastructure complexity
+    * Overly narrow common interfaces
+
+<table>
+    <tr>
+        <td>
+            <img src=".imgs/conf.png" alt="Drawing" style="width: 450px;"/> 
+        </td>
+        <td>
+            <img src=".imgs/conf_ex.png" alt="Drawing" style="width: 500px;"/> 
+        </td>
+    </tr>
+</table>
+
+### Event Handling Patterns
+Chosen Examples: Reactor and Asynchronous Completion Token
+#### 1. Reactor
+* **Summary**:
+    * The `Reactor`architectural pattern allows event-driven applications to demultiplex and dispatch service
+      requests that are delivered to an application from one or more clients.
+
+* **Context**:
+    * Consider an event-driven application that receives multiple service requests simultaneously, but
+      processes them synchronously and serially.
+
+* **Problem**: 
+    * Server applications in a distributed system must handle multiple 
+      clients that send them service requests.
+    * It might not be efficient and scalable to have a separate thread per client.
+
+* **Solution**:
+    * Synchronously wait for the arrival of indication events on one or more event sources (e.g. connected
+      socket handles).
+    * Demultiplex and dispatch the events to services that process them.
+    * Perform the application specific functionality in service handlers.
+
+* **Implementation**:
+    1. Define the event handler interface
+    2. Define the reactor interface
+    3. Implement the reactor interface
+    4. Determine the number of reactors needed in an application
+    5. Implement the concrete event handlers
+
+* **Consequences**:
+    * Separation of concerns
+    * Modularity, reusability, & configurability
+    * Portability
+    * Coarse-grained concurrency control
+    * Restricted applicability
+    * Non-preemptive
+    * Complexity of debugging & testing
+
+<table>
+    <tr>
+        <p align="center">
+            <img src=".imgs/reactor.png" alt="Drawing" style="width: 450px;"/>
+        </p>
+        <td>
+            <img src=".imgs/reactor2.png" alt="Drawing" style="width: 450px;"/> 
+        </td>
+        <td>
+            <img src=".imgs/reactor3.png" alt="Drawing" style="width: 500px;"/> 
+        </td>
+    </tr>
+</table>
+
+#### 2. Asynchronous Completion Token (ACT)
+* **Summary**:
+    * The `Asynchronous Completion Token` design pattern allows an application to demultiplex and process
+      efficiently the responses of asynchronous operations it invokes on services.
+
+* **Context**:
+    * An event-driven system in which applications invoke operations asynchronously on services and
+      subsequently process the associated service completion event responses
+
+* **Problem**: 
+    * A client application invokes one or more services asynchronously
+    * Each service returns its response via a completion event
+    * The client application must demultiplex this event to the appropriate handler (as fast as possible)
+
+* **Solution**:
+    * Together with each asynchronous operation invocation:
+        * transmit information that identifies how the initiator should process the service’s response
+            * create an Asynchronous Completion Token (ACT)
+            * the ACT is passed to the service, which holds it – but does not modify it
+        * Return this information to the initiator when the operation finishes
+        * The initiator uses the ACT to identify the completion handler
+
+* **Implementation**:
+    1. Define the ACT representation
+    2. Select a strategy for holding the ACT at the initiator
+    3. Determine how to pass the ACT from the initiator to the service
+    4. Determine a strategy for holding the ACT in the service
+    5. Determine the number of times an ACT can be used
+    6. Determine the initiator strategy for demultiplexing ACTs to completion handler hook methods
+
+* **ACT Representation**: Pointer ACT's, Object Reference ACT's, Index ACT's, Implicit ACT's, 
+                          Explicit ACT's
+* **Demultiplexing Strategy**: Queued Completion Events vs Callbacks
+
+* **Consequences**:
+    * Simplified initiator data structures
+    * Efficient state acquisition (time efficient)
+    * Space efficiency
+    * Flexibility
+    * Non-dictatorial concurrency policies
+    * Memory leaks
+    * Authentication Needed
+    * Application re-mapping
+
+
+![Diagram](.imgs/act.png)
+
+### Concurrency Patterns
+#### 1. Leader/Followers Pattern
+* **Summary**:
+    * The `Leader/Followers` architectural pattern that provides an efficient concurrency model where
+      multiple threads take turns sharing a set of event sources in order to detect, demultiplex, dispatch,
+      and process service requests that occur on the event sources.
+    * This pattern eliminates the need for and the overhead of a
+      separate Reactor thread & synchronized request queue
+      used in the Half-Sync/Half-Async pattern.
+
+* **Context**:
+    * An event-driven application where multiple service requests arriving on a set of event sources must be
+      processed efficiently by multiple threads that share the event sources
+
+* **Problem**: 
+    * It is hard to implement high-performance multi-threaded server applications
+    * These applications process high volumes of multiple event types, such as CONNECT, READ and
+      WRITE
+    * Context switching overhead
+    * Dynamic memory allocation
+    * Multiple threads calling select
+
+* **Solution**:
+    * Structure a pool of threads to share a set of event sources efficiently by taking turns demultiplexing
+    events and synchronously dispatching the events to application services that process them
+    * allow one leader thread to wait for an event
+    * other follower threads can queue up waiting for their turn
+    * after detecting an event – the leader promotes a follower to leader. It then plays the role of a
+      processing thread
+
+* **Implementation**:
+    1. Choose the handle and handle set mechanisms
+    2. Implement a protocol for temporarily (de)activating handles in a handle set
+    3. Implement a thread pool
+    4. Implement a protocol to allow threads to initially join (and later rejoin) the thread pool
+    5. Implement the follower promotion protocol
+    6. Implement the event handlers
+
+* **Consequences**:
+    * Performance enhancements 
+    * Programming simplicity
+    * Implementation complexity
+    * Lack of flexibility
+    * Network I/O bottlenecks
+
+* **Alternatives**:
+    * Use Reactor when each event requires a short amount of time to process
+        * Reactor is also a part of Leader/Followers
+    * Use Proactor when the OS supports asynchronous I/O effectively
+    * Use Half-Sync/Half-Async or Active object
+        * when there are additional synchronization or ordering constraints
+        * when event sources cannot be waited for by a single event demultiplexer
+
+<p align="center">
+    <img src=".imgs/lf.png" alt="Drawing" style="width: 650px;"/>
+</p>
+<p align="center">
+    <img src=".imgs/lf2.png" alt="Drawing" style="width: 650px;"/>
+</p>
