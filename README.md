@@ -13,7 +13,8 @@ This means the source files are not made by me,  please check them out and give 
 * [Gang of Four Patterns](https://en.wikipedia.org/wiki/Design_Patterns)
 * [Pattern Oriented Software Architecture](https://en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture) 
 
-In case of `POSA` the chosen edition was `POSA2`.
+In case of `POSA` the chosen edition was the second:
+- Pattern Oriented Software Architecture: Patterns for Concurrent and Networked Objects.
 
 
 ## Chapter 1: Introduction
