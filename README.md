@@ -5,8 +5,10 @@ Technical University of Munich. This is offered by the
 was such a pleasure that I wished to transform the material into a repository for future
 referral.
 
-All the source code examples are taken from [this](https://sourcemaking.com/)
- amazing site and are not made by me. Please check them out and give them their props!
+- Some source code examples are taken from [sourcemaking.com](https://sourcemaking.com/)
+- Others are taken from [refactor.guru](https://refactoring.guru/)
+
+This means the source files are not made by me,  please check them out and give them their props!
 
 ## Chapter 1: Introduction
 ### Patterns
@@ -229,15 +231,6 @@ See more [here](https://sourcemaking.com/design_patterns/memento).
     * Strategy lets the algorithm vary independently from the clients that use it.
     * Capture the abstraction in an interface, bury implementation details in derived classes.
 
-* **Applicability**:
-    * Use the Memento pattern when
-    * a snapshot of (some portion of) an object's state must be saved so that it can be restored to that
-      state later, and
-    * a direct interface to obtaining the state would expose implementation details and break the object's
-      encapsulation.
-    * Can implement undo and redo capabilities with use of a stack of Command objects and
-      a stack of Memento objects.
-
 * Consequences
     * Preserve encapsulation boundaries
     * Using mementos might be expensive
@@ -255,3 +248,94 @@ See more [here](https://sourcemaking.com/design_patterns/memento).
     * Strategy objects often make good Flyweights.
 
 See more [here](https://sourcemaking.com/design_patterns/strategy).
+
+## Chapter 4: GoF Patterns: Creational
+### Creational Patterns
+In software engineering, creational design patterns are design patterns that deal with object creation
+mechanisms, trying to create objects in a manner suitable to the situation.
+
+The basic form of object creation could result in design problems or added complexity to the design.
+Creational design patterns solve this problem by controlling this object creation using indirection.
+
+Chosen Examples: Abstract Factory, Factory Method, Singleton and Prototype
+
+#### 1. Factory Method (AKA Virtual Constructor)
+* **Summary**: Creates an instance of several derived classes.
+* **Problem**: 
+    * A framework needs to standardize the architectural model for a range of applications, 
+      but allow for individual applications to define their own domain objects and 
+      provide for their instantiation.
+
+* **Intent**:
+    * Define an interface for creating an object, but let subclasses decide which 
+      class to instantiate. Factory Method lets a class defer instantiation to subclasses.
+    * Defining a "virtual" constructor.
+    * The new operator considered harmful.
+
+* **Applicability**:
+    * a class cant anticipate the class of objects it must create
+    * a class wants its subclasses to specify the objects it creates.
+    * classes delegate responsibility to one of several helper subclasses, and you want to localize the
+      knowledge of which helper subclass is the delegate.
+
+* **Relations to other Patterns**:
+    * Factory Methods are usually called within Template Methods.
+    * Factory Method: creation through inheritance. Prototype: creation through delegation.
+    * Often, designs start out using Factory Method (less complicated, more customizable, subclasses
+      proliferate) and evolve toward Abstract Factory, Prototype, or Builder (more flexible, more complex) as
+      the designer discovers where more flexibility is needed.
+
+See more [here](https://sourcemaking.com/design_patterns/factory_method).
+
+#### 2. Abstract Factory (AKA Kit)
+* **Summary**: Creates an instance of several families of classes.
+* **Problem**: 
+    * If an application is to be portable, it needs to encapsulate platform dependencies.
+    * These "platforms" might include: windowing system, operating system, database, etc.
+    * Too often, this encapsulation is not engineered in advance, and lots of #ifdef case statements with
+      options for all currently supported platforms begin to procreate like rabbits throughout the code.
+
+* **Intent**:
+    * Provide an interface for creating families of related or dependent objects without specifying their
+      concrete classes.
+    * A factory of factories, or "super factory“.
+
+* **Applicability**:
+    * a system should be independent of how its products are created, composed, and represented.
+    * a system should be configured with one of multiple families of products.
+    * a family of related product objects is designed to be used together, and you need to enforce this
+      constraint.
+    * you want to provide a class library of products, and you want to reveal just their interfaces, not their
+      implementations.
+
+See more [here](https://refactoring.guru/design-patterns/abstract-factory).
+
+#### 3. Singleton
+One could say that Singleton is the modern descendant of global variables.
+* Singleton is a creational design pattern that lets you ensure that a class has only one instance and
+  provide a global access point to this instance.
+* Singleton declares a static method getInstance()
+  that should return the same instance of Singleton class.
+* Singleton's constructor should be hidden from
+  client code. getInstance() should be the only way
+  to create and get Singleton objects.
+* Creates a read-only global variable and ensures
+  that there is only one instance created at first
+  access and no duplicates exist which would be
+  created with conventional constructor calls.
+
+#### 4. Prototype
+Prototype is a creational design pattern that lets you
+produce new objects by copying existing ones without
+compromising their internals.
+
+* Manual Approach: Creating duplicate of an object by
+  creating a fresh object of the same class, then go over all
+  fields of the original object and copy their values to the
+  new object.
+* The Prototype pattern delegates the cloning process to
+  objects themselves.
+* It declares the common interface for all objects that allow
+  cloning. It allows cloning objects without tight coupling to
+  their concrete classes. Usually, the prototype interface
+  contains a single clone method.
