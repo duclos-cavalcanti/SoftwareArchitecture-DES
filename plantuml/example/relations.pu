@@ -1,0 +1,60 @@
+@startuml
+' Settings
+' ============================
+
+' use +,#,- instead of icons
+'skinparam classAttributeIconSize 0
+
+' horizontal distance in px
+' skinparam nodesep 60 
+
+' vertical distance in px
+' skinparam ranksep 50
+
+' use only straight lines (ortho/polyline)
+skinparam linetype ortho
+
+' title
+title 1-1-1 UML Relations
+
+
+
+' Abstract Classes
+' ============================
+class Vehicle {
+    +name: String
+}
+
+class Person {
+}
+
+' Concrete Classes
+' ============================
+class Driver {
+}
+
+class Car {
+    +nr_wheels: Integer
+}
+
+class Wheel {
+    +radius: Integer
+}
+
+
+' Relations
+' ================================
+' Inheritance
+Vehicle <|-down- Car
+Person <|-down- Driver
+
+' Composition
+Wheel *-left--- Car
+
+' Aggregation
+Company o-up--- Car 
+
+' Association
+Driver - Car : drives >
+
+@enduml

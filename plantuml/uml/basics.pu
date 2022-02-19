@@ -1,0 +1,19 @@
+@startuml
+
+'title
+title Example Title
+
+'nodes and notes
+( parenth node )
+note left : Note
+
+[ bracket node ]
+note left : Note
+
+'single line comment
+
+/'
+ block comment
+'/
+
+@enduml

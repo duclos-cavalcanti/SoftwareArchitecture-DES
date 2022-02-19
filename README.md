@@ -1,5 +1,5 @@
 # Software Architecture for Distributed Embedded Systems
-This is a summary and compilation of information provided by a Masters course at the
+This is a summary and compilation of the content provided by a Masters course at the
 Technical University of Munich. This is offered by the 
 [Embedded Systems and Internet of Things](https://www.ei.tum.de/en/esi/home/) chair and
 was such a pleasure that I wished to transform the material into a repository for future
@@ -16,6 +16,7 @@ This means the source files are not made by me,  please check them out and give 
 In case of `POSA` the chosen edition was the second:
 - Pattern Oriented Software Architecture: Patterns for Concurrent and Networked Objects.
 
+Also a small `plantuml` tutorial is located in the folder with the corresponding name.
 
 ## Chapter 1: Introduction
 ### Patterns

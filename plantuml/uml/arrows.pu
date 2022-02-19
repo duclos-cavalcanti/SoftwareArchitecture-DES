@@ -1,0 +1,12 @@
+@startuml
+
+(up) -up-> (right)
+(right) -right-> (down)
+(down) -down-> (left)
+(left) -left-> (up)
+
+(node) --> (Double Dash Arrow)
+(node)  ->  (Single Dash Arrow) 
+(Reverse Single Dash Arrow)  <-  (node) 
+
+@enduml

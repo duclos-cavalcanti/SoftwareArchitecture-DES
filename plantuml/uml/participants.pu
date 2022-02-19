@@ -1,0 +1,11 @@
+@startuml
+
+actor Actor
+boundary Boundary
+control Control
+entity Entity
+database Database
+
+:Actor alias:
+
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+
+legend
+    |= Color |= Type |= Description |
+    | <size:11><back:#Crimson>           </back></size>|    <&arrow-right> | Example 1 |
+    | <size:11><back:#LightSeaGreen>           </back></size>|    <&arrow-right> | Example 2 |
+    | <size:11><back:#DarkGreen>           </back></size>|    <&arrow-right> | Example 3 |
+    | <size:11><back:#YellowGreen>           </back></size>|    <&box> | Example 4 |
+    | <size:11><back:#Chocolate>           </back></size>|    <&box> | Example 5 |
+endlegend
+
+@enduml
+

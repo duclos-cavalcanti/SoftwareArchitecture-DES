@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="457px" preserveAspectRatio="none" style="width:458px;height:457px;background:#FFFFFF;" version="1.1" viewBox="0 0 458 457" width="458px" zoomAndPan="magnify"><defs><filter height="300%" id="fgo5ew6iagpji" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="180" x="132.5" y="16.708">1-1-1 UML Relations</text><!--MD5=[3aa0d89c6bfdcbf7f32042cedac57549]
+class Vehicle--><rect codeLine="23" fill="#FEFECE" filter="url(#fgo5ew6iagpji)" height="60.8047" id="Vehicle" style="stroke:#A80036;stroke-width:1.5;" width="100" x="183" y="27.9531"/><ellipse cx="208.35" cy="43.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M211.3188,49.5938 Q210.7406,49.8906 210.1,50.0313 Q209.4594,50.1875 208.7563,50.1875 Q206.2563,50.1875 204.9281,48.5469 Q203.6156,46.8906 203.6156,43.7656 Q203.6156,40.6406 204.9281,38.9844 Q206.2563,37.3281 208.7563,37.3281 Q209.4594,37.3281 210.1,37.4844 Q210.7563,37.6406 211.3188,37.9375 L211.3188,40.6563 Q210.6938,40.0781 210.1,39.8125 Q209.5063,39.5313 208.8813,39.5313 Q207.5375,39.5313 206.85,40.6094 Q206.1625,41.6719 206.1625,43.7656 Q206.1625,45.8594 206.85,46.9375 Q207.5375,48 208.8813,48 Q209.5063,48 210.1,47.7344 Q210.6938,47.4531 211.3188,46.875 L211.3188,49.5938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="45" x="224.65" y="48.1074">Vehicle</text><line style="stroke:#A80036;stroke-width:1.5;" x1="184" x2="282" y1="59.9531" y2="59.9531"/><ellipse cx="194" cy="70.9531" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="203" y="74.1636">name: String</text><line style="stroke:#A80036;stroke-width:1.5;" x1="184" x2="282" y1="80.7578" y2="80.7578"/><!--MD5=[09ce52be0ee7de43c61b6e2d59bf108b]
+class Person--><rect codeLine="27" fill="#FEFECE" filter="url(#fgo5ew6iagpji)" height="48" id="Person" style="stroke:#A80036;stroke-width:1.5;" width="76" x="7" y="34.4531"/><ellipse cx="22" cy="50.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M24.9688,56.0938 Q24.3906,56.3906 23.75,56.5313 Q23.1094,56.6875 22.4063,56.6875 Q19.9063,56.6875 18.5781,55.0469 Q17.2656,53.3906 17.2656,50.2656 Q17.2656,47.1406 18.5781,45.4844 Q19.9063,43.8281 22.4063,43.8281 Q23.1094,43.8281 23.75,43.9844 Q24.4063,44.1406 24.9688,44.4375 L24.9688,47.1563 Q24.3438,46.5781 23.75,46.3125 Q23.1563,46.0313 22.5313,46.0313 Q21.1875,46.0313 20.5,47.1094 Q19.8125,48.1719 19.8125,50.2656 Q19.8125,52.3594 20.5,53.4375 Q21.1875,54.5 22.5313,54.5 Q23.1563,54.5 23.75,54.2344 Q24.3438,53.9531 24.9688,53.375 L24.9688,56.0938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="44" x="36" y="54.6074">Person</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="82" y1="66.4531" y2="66.4531"/><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="82" y1="74.4531" y2="74.4531"/><!--MD5=[eee9d396a8aca12c6c152931e8dc1ab6]
+class Driver--><rect codeLine="32" fill="#FEFECE" filter="url(#fgo5ew6iagpji)" height="48" id="Driver" style="stroke:#A80036;stroke-width:1.5;" width="68" x="11" y="156.4531"/><ellipse cx="26" cy="172.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M28.9688,178.0938 Q28.3906,178.3906 27.75,178.5313 Q27.1094,178.6875 26.4063,178.6875 Q23.9063,178.6875 22.5781,177.0469 Q21.2656,175.3906 21.2656,172.2656 Q21.2656,169.1406 22.5781,167.4844 Q23.9063,165.8281 26.4063,165.8281 Q27.1094,165.8281 27.75,165.9844 Q28.4063,166.1406 28.9688,166.4375 L28.9688,169.1563 Q28.3438,168.5781 27.75,168.3125 Q27.1563,168.0313 26.5313,168.0313 Q25.1875,168.0313 24.5,169.1094 Q23.8125,170.1719 23.8125,172.2656 Q23.8125,174.3594 24.5,175.4375 Q25.1875,176.5 26.5313,176.5 Q27.1563,176.5 27.75,176.2344 Q28.3438,175.9531 28.9688,175.375 L28.9688,178.0938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="36" x="40" y="176.6074">Driver</text><line style="stroke:#A80036;stroke-width:1.5;" x1="12" x2="78" y1="188.4531" y2="188.4531"/><line style="stroke:#A80036;stroke-width:1.5;" x1="12" x2="78" y1="196.4531" y2="196.4531"/><!--MD5=[3f0ef310aaa84a542276992c5216544d]
+class Car--><rect codeLine="35" fill="#FEFECE" filter="url(#fgo5ew6iagpji)" height="60.8047" id="Car" style="stroke:#A80036;stroke-width:1.5;" width="132" x="167" y="149.9531"/><ellipse cx="218.25" cy="165.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M221.2188,171.5938 Q220.6406,171.8906 220,172.0313 Q219.3594,172.1875 218.6563,172.1875 Q216.1563,172.1875 214.8281,170.5469 Q213.5156,168.8906 213.5156,165.7656 Q213.5156,162.6406 214.8281,160.9844 Q216.1563,159.3281 218.6563,159.3281 Q219.3594,159.3281 220,159.4844 Q220.6563,159.6406 221.2188,159.9375 L221.2188,162.6563 Q220.5938,162.0781 220,161.8125 Q219.4063,161.5313 218.7813,161.5313 Q217.4375,161.5313 216.75,162.6094 Q216.0625,163.6719 216.0625,165.7656 Q216.0625,167.8594 216.75,168.9375 Q217.4375,170 218.7813,170 Q219.4063,170 220,169.7344 Q220.5938,169.4531 221.2188,168.875 L221.2188,171.5938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="21" x="238.75" y="170.1074">Car</text><line style="stroke:#A80036;stroke-width:1.5;" x1="168" x2="298" y1="181.9531" y2="181.9531"/><ellipse cx="178" cy="192.9531" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="106" x="187" y="196.1636">nr_wheels: Integer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="168" x2="298" y1="202.7578" y2="202.7578"/><!--MD5=[63ed6a0a2dfd613875880437a5e2b06e]
+class Wheel--><rect codeLine="39" fill="#FEFECE" filter="url(#fgo5ew6iagpji)" height="60.8047" id="Wheel" style="stroke:#A80036;stroke-width:1.5;" width="110" x="334" y="149.9531"/><ellipse cx="367" cy="165.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M369.9688,171.5938 Q369.3906,171.8906 368.75,172.0313 Q368.1094,172.1875 367.4063,172.1875 Q364.9063,172.1875 363.5781,170.5469 Q362.2656,168.8906 362.2656,165.7656 Q362.2656,162.6406 363.5781,160.9844 Q364.9063,159.3281 367.4063,159.3281 Q368.1094,159.3281 368.75,159.4844 Q369.4063,159.6406 369.9688,159.9375 L369.9688,162.6563 Q369.3438,162.0781 368.75,161.8125 Q368.1563,161.5313 367.5313,161.5313 Q366.1875,161.5313 365.5,162.6094 Q364.8125,163.6719 364.8125,165.7656 Q364.8125,167.8594 365.5,168.9375 Q366.1875,170 367.5313,170 Q368.1563,170 368.75,169.7344 Q369.3438,169.4531 369.9688,168.875 L369.9688,171.5938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="38" x="385" y="170.1074">Wheel</text><line style="stroke:#A80036;stroke-width:1.5;" x1="335" x2="443" y1="181.9531" y2="181.9531"/><ellipse cx="345" cy="192.9531" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="84" x="354" y="196.1636">radius: Integer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="335" x2="443" y1="202.7578" y2="202.7578"/><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect fill="#FEFECE" filter="url(#fgo5ew6iagpji)" height="48" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="89" x="188.5" y="395.9531"/><ellipse cx="203.5" cy="411.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M206.4688,417.5938 Q205.8906,417.8906 205.25,418.0313 Q204.6094,418.1875 203.9063,418.1875 Q201.4063,418.1875 200.0781,416.5469 Q198.7656,414.8906 198.7656,411.7656 Q198.7656,408.6406 200.0781,406.9844 Q201.4063,405.3281 203.9063,405.3281 Q204.6094,405.3281 205.25,405.4844 Q205.9063,405.6406 206.4688,405.9375 L206.4688,408.6563 Q205.8438,408.0781 205.25,407.8125 Q204.6563,407.5313 204.0313,407.5313 Q202.6875,407.5313 202,408.6094 Q201.3125,409.6719 201.3125,411.7656 Q201.3125,413.8594 202,414.9375 Q202.6875,416 204.0313,416 Q204.6563,416 205.25,415.7344 Q205.8438,415.4531 206.4688,414.875 L206.4688,417.5938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="57" x="217.5" y="416.1074">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="189.5" x2="276.5" y1="427.9531" y2="427.9531"/><line style="stroke:#A80036;stroke-width:1.5;" x1="189.5" x2="276.5" y1="435.9531" y2="435.9531"/><!--MD5=[22dd0d5001cffe3a5a97c942353cd104]
+reverse link Vehicle to Car--><path codeLine="47" d="M233,109.2431 C233,109.2431 233,149.6731 233,149.6731 " fill="none" id="Vehicle-backto-Car" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="226,109.2431,233,89.2431,240,109.2431,226,109.2431" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[24ae49f0737a4afb7a40e2461c79b3b9]
+reverse link Person to Driver--><path codeLine="48" d="M45,102.5531 C45,102.5531 45,156.4031 45,156.4031 " fill="none" id="Person-backto-Driver" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="38,102.5531,45,82.5531,52,102.5531,38,102.5531" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[2ea1030a1cbd423ae6287d5d7d5e8969]
+link Car to Wheel--><path codeLine="51" d="M299.16,180.9531 C299.16,180.9531 320.56,180.9531 320.56,180.9531 " fill="none" id="Car-to-Wheel" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="333.56,180.9531,327.56,176.9531,321.56,180.9531,327.56,184.9531,333.56,180.9531" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[cbc31051ed7013f831521cca16f8a988]
+link Car to Company--><path codeLine="54" d="M233,211.2731 C233,211.2731 233,382.7631 233,382.7631 " fill="none" id="Car-to-Company" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="233,395.7631,237,389.7631,233,383.7631,229,389.7631,233,395.7631" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[85884a73f707af3ae230d559cad4fc2c]
+link Driver to Car--><path codeLine="57" d="M79.05,180.9531 C103.49,180.9531 137.21,180.9531 166.87,180.9531 " fill="none" id="Driver-Car" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[37ecb990de96ad4f89ed371e195084b4]
+@startuml
+' Settings
+' ============================
+
+' use +,#,- instead of icons
+'skinparam classAttributeIconSize 0
+
+' horizontal distance in px
+' skinparam nodesep 60 
+
+' vertical distance in px
+' skinparam ranksep 50
+
+' use only straight lines (ortho/polyline)
+skinparam linetype ortho
+
+' title
+title 1-1-1 UML Relations
+
+
+
+' Abstract Classes
+' ============================
+class Vehicle {
+    +name: String
+}
+
+class Person {
+}
+
+' Concrete Classes
+' ============================
+class Driver {
+}
+
+class Car {
+    +nr_wheels: Integer
+}
+
+class Wheel {
+    +radius: Integer
+}
+
+
+' Relations
+' ================================
+' Inheritance
+Vehicle <|-down- Car
+Person <|-down- Driver
+
+' Composition
+Wheel *-left- - - Car
+
+' Aggregation
+Company o-up- - - Car 
+
+' Association
+Driver - Car : drives >
+
+@enduml
+
+@startuml
+
+
+
+
+skinparam linetype ortho
+
+title 1-1-1 UML Relations
+
+
+
+class Vehicle {
+    +name: String
+}
+
+class Person {
+}
+
+class Driver {
+}
+
+class Car {
+    +nr_wheels: Integer
+}
+
+class Wheel {
+    +radius: Integer
+}
+
+
+Vehicle <|-down- Car
+Person <|-down- Driver
+
+Wheel *-left- - - Car
+
+Company o-up- - - Car 
+
+Driver - Car : drives >
+
+@enduml
+
+PlantUML version 1.2021.9(Sun Jul 25 12:13:56 CEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1049px" preserveAspectRatio="none" style="width:990px;height:1049px;background:#FFFFFF;" version="1.1" viewBox="0 0 990 1049" width="990px" zoomAndPan="magnify"><defs><filter height="300%" id="fjqgu96a7qud" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="166" x="405.75" y="16.708">1-2-3 Light Groups</text><!--MD5=[fc539fa3f3b7db9b31467e896d367b3b]
+class Device--><rect codeLine="25" fill="#FEFECE" filter="url(#fjqgu96a7qud)" height="163.2422" id="Device" style="stroke:#A80036;stroke-width:1.5;" width="181" x="240" y="27.9531"/><ellipse cx="305.75" cy="43.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M308.7188,49.5938 Q308.1406,49.8906 307.5,50.0313 Q306.8594,50.1875 306.1563,50.1875 Q303.6563,50.1875 302.3281,48.5469 Q301.0156,46.8906 301.0156,43.7656 Q301.0156,40.6406 302.3281,38.9844 Q303.6563,37.3281 306.1563,37.3281 Q306.8594,37.3281 307.5,37.4844 Q308.1563,37.6406 308.7188,37.9375 L308.7188,40.6563 Q308.0938,40.0781 307.5,39.8125 Q306.9063,39.5313 306.2813,39.5313 Q304.9375,39.5313 304.25,40.6094 Q303.5625,41.6719 303.5625,43.7656 Q303.5625,45.8594 304.25,46.9375 Q304.9375,48 306.2813,48 Q306.9063,48 307.5,47.7344 Q308.0938,47.4531 308.7188,46.875 L308.7188,49.5938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="41" x="326.25" y="48.1074">Device</text><line style="stroke:#A80036;stroke-width:1.5;" x1="241" x2="420" y1="59.9531" y2="59.9531"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="248" y="67.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="260" y="74.1636">app_id : Integer</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="248" y="80.7578"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="104" x="260" y="86.9683">device_id : Integer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="241" x2="420" y1="93.5625" y2="93.5625"/><ellipse cx="251" cy="104.5625" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="260" y="107.7729">«create» Device()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="248" y="114.3672"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="79" x="260" y="120.5776">send(id, msg)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="248" y="127.1719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="260" y="133.3823">recv(id, msg)</text><ellipse cx="251" cy="142.9766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="58" x="260" y="146.187">getAppID()</text><ellipse cx="251" cy="155.7813" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="260" y="158.9917">getDeviceID()</text><ellipse cx="251" cy="168.5859" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="142" x="260" y="171.7964">getDeviceStatus(): String</text><ellipse cx="251" cy="181.3906" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="155" x="260" y="184.6011">processAction(&amp;action_obj)</text><!--MD5=[7c1a0278dec21c72584b17e1785fd623]
+class Light--><rect codeLine="37" fill="#FEFECE" filter="url(#fjqgu96a7qud)" height="99.2188" id="Light" style="stroke:#A80036;stroke-width:1.5;" width="181" x="240" y="270.9531"/><ellipse cx="311.25" cy="286.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M314.2188,292.5938 Q313.6406,292.8906 313,293.0313 Q312.3594,293.1875 311.6563,293.1875 Q309.1563,293.1875 307.8281,291.5469 Q306.5156,289.8906 306.5156,286.7656 Q306.5156,283.6406 307.8281,281.9844 Q309.1563,280.3281 311.6563,280.3281 Q312.3594,280.3281 313,280.4844 Q313.6563,280.6406 314.2188,280.9375 L314.2188,283.6563 Q313.5938,283.0781 313,282.8125 Q312.4063,282.5313 311.7813,282.5313 Q310.4375,282.5313 309.75,283.6094 Q309.0625,284.6719 309.0625,286.7656 Q309.0625,288.8594 309.75,289.9375 Q310.4375,291 311.7813,291 Q312.4063,291 313,290.7344 Q313.5938,290.4531 314.2188,289.875 L314.2188,292.5938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="30" x="331.75" y="291.1074">Light</text><line style="stroke:#A80036;stroke-width:1.5;" x1="241" x2="420" y1="302.9531" y2="302.9531"/><line style="stroke:#A80036;stroke-width:1.5;" x1="241" x2="420" y1="310.9531" y2="310.9531"/><ellipse cx="251" cy="321.9531" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="260" y="325.1636">«create» Light()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="248" y="331.7578"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="22" x="260" y="337.9683">on()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="248" y="344.5625"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="23" x="260" y="350.7729">off()</text><ellipse cx="251" cy="360.3672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="155" x="260" y="363.5776">processAction(&amp;action_obj)</text><!--MD5=[41314a0efc36828092cff9ebad2fcafd]
+class Group--><rect codeLine="44" fill="#FEFECE" filter="url(#fjqgu96a7qud)" height="124.8281" id="Group" style="stroke:#A80036;stroke-width:1.5;" width="181" x="240" y="910.9531"/><ellipse cx="307.25" cy="926.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M310.2188,932.5938 Q309.6406,932.8906 309,933.0313 Q308.3594,933.1875 307.6563,933.1875 Q305.1563,933.1875 303.8281,931.5469 Q302.5156,929.8906 302.5156,926.7656 Q302.5156,923.6406 303.8281,921.9844 Q305.1563,920.3281 307.6563,920.3281 Q308.3594,920.3281 309,920.4844 Q309.6563,920.6406 310.2188,920.9375 L310.2188,923.6563 Q309.5938,923.0781 309,922.8125 Q308.4063,922.5313 307.7813,922.5313 Q306.4375,922.5313 305.75,923.6094 Q305.0625,924.6719 305.0625,926.7656 Q305.0625,928.8594 305.75,929.9375 Q306.4375,931 307.7813,931 Q308.4063,931 309,930.7344 Q309.5938,930.4531 310.2188,929.875 L310.2188,932.5938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="38" x="327.75" y="931.1074">Group</text><line style="stroke:#A80036;stroke-width:1.5;" x1="241" x2="420" y1="942.9531" y2="942.9531"/><line style="stroke:#A80036;stroke-width:1.5;" x1="241" x2="420" y1="950.9531" y2="950.9531"/><ellipse cx="251" cy="961.9531" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="97" x="260" y="965.1636">«create» Group()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="248" y="971.7578"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="26" x="260" y="977.9683">set()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="248" y="984.5625"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="40" x="260" y="990.7729">unset()</text><ellipse cx="251" cy="1000.3672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="93" x="260" y="1003.5776">addLight(app_id)</text><ellipse cx="251" cy="1013.1719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="260" y="1016.3823">removeLight(app_id)</text><ellipse cx="251" cy="1025.9766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="155" x="260" y="1029.187">processAction(&amp;action_obj)</text><!--MD5=[999e49f72af8639b360af99f8c1ff713]
+class SwitchLight--><rect codeLine="56" fill="#FEFECE" filter="url(#fjqgu96a7qud)" height="99.2188" id="SwitchLight" style="stroke:#A80036;stroke-width:1.5;" width="181" x="391" y="494.9531"/><ellipse cx="442.25" cy="510.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M445.2188,516.5938 Q444.6406,516.8906 444,517.0313 Q443.3594,517.1875 442.6563,517.1875 Q440.1563,517.1875 438.8281,515.5469 Q437.5156,513.8906 437.5156,510.7656 Q437.5156,507.6406 438.8281,505.9844 Q440.1563,504.3281 442.6563,504.3281 Q443.3594,504.3281 444,504.4844 Q444.6563,504.6406 445.2188,504.9375 L445.2188,507.6563 Q444.5938,507.0781 444,506.8125 Q443.4063,506.5313 442.7813,506.5313 Q441.4375,506.5313 440.75,507.6094 Q440.0625,508.6719 440.0625,510.7656 Q440.0625,512.8594 440.75,513.9375 Q441.4375,515 442.7813,515 Q443.4063,515 444,514.7344 Q444.5938,514.4531 445.2188,513.875 L445.2188,516.5938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="70" x="462.75" y="515.1074">SwitchLight</text><line style="stroke:#A80036;stroke-width:1.5;" x1="392" x2="571" y1="526.9531" y2="526.9531"/><line style="stroke:#A80036;stroke-width:1.5;" x1="392" x2="571" y1="534.9531" y2="534.9531"/><ellipse cx="402" cy="545.9531" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="126" x="411" y="549.1636">«create» SwitchLight()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="399" y="555.7578"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="22" x="411" y="561.9683">on()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="399" y="568.5625"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="23" x="411" y="574.7729">off()</text><ellipse cx="402" cy="584.3672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="155" x="411" y="587.5776">processAction(&amp;action_obj)</text><!--MD5=[a54edd4c870d7b3a603adac8183ae883]
+class DimmLight--><rect codeLine="63" fill="#FEFECE" filter="url(#fjqgu96a7qud)" height="124.8281" id="DimmLight" style="stroke:#A80036;stroke-width:1.5;" width="181" x="90" y="481.9531"/><ellipse cx="144.25" cy="497.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M147.2188,503.5938 Q146.6406,503.8906 146,504.0313 Q145.3594,504.1875 144.6563,504.1875 Q142.1563,504.1875 140.8281,502.5469 Q139.5156,500.8906 139.5156,497.7656 Q139.5156,494.6406 140.8281,492.9844 Q142.1563,491.3281 144.6563,491.3281 Q145.3594,491.3281 146,491.4844 Q146.6563,491.6406 147.2188,491.9375 L147.2188,494.6563 Q146.5938,494.0781 146,493.8125 Q145.4063,493.5313 144.7813,493.5313 Q143.4375,493.5313 142.75,494.6094 Q142.0625,495.6719 142.0625,497.7656 Q142.0625,499.8594 142.75,500.9375 Q143.4375,502 144.7813,502 Q145.4063,502 146,501.7344 Q146.5938,501.4531 147.2188,500.875 L147.2188,503.5938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="64" x="164.75" y="502.1074">DimmLight</text><line style="stroke:#A80036;stroke-width:1.5;" x1="91" x2="270" y1="513.9531" y2="513.9531"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="98" y="521.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="104" x="110" y="528.1636">last_state: Integer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="91" x2="270" y1="534.7578" y2="534.7578"/><ellipse cx="101" cy="545.7578" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="122" x="110" y="548.9683">«create» DimmLight()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="98" y="555.5625"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="110" y="561.7729">on(brightness)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="98" y="568.3672"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="23" x="110" y="574.5776">off()</text><ellipse cx="101" cy="584.1719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="110" y="587.3823">getLastState()</text><ellipse cx="101" cy="596.9766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="155" x="110" y="600.187">processAction(&amp;action_obj)</text><!--MD5=[fa9212bbe4a7ff480e36f0f34db1d1f0]
+class GroupDimmLight--><rect codeLine="73" fill="#FEFECE" filter="url(#fjqgu96a7qud)" height="112.0234" id="GroupDimmLight" style="stroke:#A80036;stroke-width:1.5;" width="267" x="7" y="718.9531"/><ellipse cx="85.25" cy="734.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M88.2188,740.5938 Q87.6406,740.8906 87,741.0313 Q86.3594,741.1875 85.6563,741.1875 Q83.1563,741.1875 81.8281,739.5469 Q80.5156,737.8906 80.5156,734.7656 Q80.5156,731.6406 81.8281,729.9844 Q83.1563,728.3281 85.6563,728.3281 Q86.3594,728.3281 87,728.4844 Q87.6563,728.6406 88.2188,728.9375 L88.2188,731.6563 Q87.5938,731.0781 87,730.8125 Q86.4063,730.5313 85.7813,730.5313 Q84.4375,730.5313 83.75,731.6094 Q83.0625,732.6719 83.0625,734.7656 Q83.0625,736.8594 83.75,737.9375 Q84.4375,739 85.7813,739 Q86.4063,739 87,738.7344 Q87.5938,738.4531 88.2188,737.875 L88.2188,740.5938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="102" x="105.75" y="739.1074">GroupDimmLight</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="273" y1="750.9531" y2="750.9531"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="758.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="241" x="27" y="765.1636">dimm_lights[]: Array of DimmLight Objects</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="273" y1="771.7578" y2="771.7578"/><ellipse cx="18" cy="782.7578" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="157" x="27" y="785.9683">«create» GroupDimmLight()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="792.5625"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="27" y="798.7729">set(brightness)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="805.3672"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="40" x="27" y="811.5776">unset()</text><ellipse cx="18" cy="821.1719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="155" x="27" y="824.3823">processAction(&amp;action_obj)</text><!--MD5=[3b3c26083797194c137acdf47ba9247e]
+class GroupSwitchLight--><rect codeLine="81" fill="#FEFECE" filter="url(#fjqgu96a7qud)" height="112.0234" id="GroupSwitchLight" style="stroke:#A80036;stroke-width:1.5;" width="255" x="394" y="718.9531"/><ellipse cx="463.25" cy="734.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M466.2188,740.5938 Q465.6406,740.8906 465,741.0313 Q464.3594,741.1875 463.6563,741.1875 Q461.1563,741.1875 459.8281,739.5469 Q458.5156,737.8906 458.5156,734.7656 Q458.5156,731.6406 459.8281,729.9844 Q461.1563,728.3281 463.6563,728.3281 Q464.3594,728.3281 465,728.4844 Q465.6563,728.6406 466.2188,728.9375 L466.2188,731.6563 Q465.5938,731.0781 465,730.8125 Q464.4063,730.5313 463.7813,730.5313 Q462.4375,730.5313 461.75,731.6094 Q461.0625,732.6719 461.0625,734.7656 Q461.0625,736.8594 461.75,737.9375 Q462.4375,739 463.7813,739 Q464.4063,739 465,738.7344 Q465.5938,738.4531 466.2188,737.875 L466.2188,740.5938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="108" x="483.75" y="739.1074">GroupSwitchLight</text><line style="stroke:#A80036;stroke-width:1.5;" x1="395" x2="648" y1="750.9531" y2="750.9531"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="402" y="758.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="229" x="414" y="765.1636">sw_lights[]: Array of SwitchLight Objects</text><line style="stroke:#A80036;stroke-width:1.5;" x1="395" x2="648" y1="771.7578" y2="771.7578"/><ellipse cx="405" cy="782.7578" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="161" x="414" y="785.9683">«create» GroupSwitchLight()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="402" y="792.5625"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="26" x="414" y="798.7729">set()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="402" y="805.3672"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="40" x="414" y="811.5776">unset()</text><ellipse cx="405" cy="821.1719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="155" x="414" y="824.3823">processAction(&amp;action_obj)</text><!--MD5=[e4faacc5b8aef66b11ab0c816bbbc7f8]
+class Scene--><rect codeLine="90" fill="#FEFECE" filter="url(#fjqgu96a7qud)" height="188.8516" id="Scene" style="stroke:#A80036;stroke-width:1.5;" width="284" x="692.5" y="449.9531"/><ellipse cx="810.75" cy="465.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M813.7188,471.5938 Q813.1406,471.8906 812.5,472.0313 Q811.8594,472.1875 811.1563,472.1875 Q808.6563,472.1875 807.3281,470.5469 Q806.0156,468.8906 806.0156,465.7656 Q806.0156,462.6406 807.3281,460.9844 Q808.6563,459.3281 811.1563,459.3281 Q811.8594,459.3281 812.5,459.4844 Q813.1563,459.6406 813.7188,459.9375 L813.7188,462.6563 Q813.0938,462.0781 812.5,461.8125 Q811.9063,461.5313 811.2813,461.5313 Q809.9375,461.5313 809.25,462.6094 Q808.5625,463.6719 808.5625,465.7656 Q808.5625,467.8594 809.25,468.9375 Q809.9375,470 811.2813,470 Q811.9063,470 812.5,469.7344 Q813.0938,469.4531 813.7188,468.875 L813.7188,471.5938 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="39" x="831.25" y="470.1074">Scene</text><line style="stroke:#A80036;stroke-width:1.5;" x1="693.5" x2="975.5" y1="481.9531" y2="481.9531"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="700.5" y="489.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="712.5" y="496.1636">app_id : Integer</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="700.5" y="502.7578"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="170" x="712.5" y="508.9683">lights[]: Array of Light Objects</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="700.5" y="515.5625"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="258" x="712.5" y="521.7729">appIdConfigDict: Dict &lt;app_id, configuration&gt;</text><line style="stroke:#A80036;stroke-width:1.5;" x1="693.5" x2="975.5" y1="528.3672" y2="528.3672"/><ellipse cx="703.5" cy="539.3672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="97" x="712.5" y="542.5776">«create» Scene()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="700.5" y="549.1719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="61" x="712.5" y="555.3823">setScene()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="700.5" y="561.9766"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="79" x="712.5" y="568.187">send(id, msg)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="700.5" y="574.7813"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="712.5" y="580.9917">recv(id, msg)</text><ellipse cx="703.5" cy="590.5859" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="58" x="712.5" y="593.7964">getAppID()</text><ellipse cx="703.5" cy="603.3906" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="135" x="712.5" y="606.6011">addLight(app_id, config)</text><ellipse cx="703.5" cy="616.1953" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="712.5" y="619.4058">removeLight(app_id)</text><ellipse cx="703.5" cy="629" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="155" x="712.5" y="632.2104">processAction(&amp;action_obj)</text><!--MD5=[dcd22d50342af11664ed34e33e614224]
+reverse link Device to Light--><path codeLine="107" d="M330.5,211.0331 C330.5,211.0331 330.5,270.8031 330.5,270.8031 " fill="none" id="Device-backto-Light" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="323.5,211.0331,330.5,191.0331,337.5,211.0331,323.5,211.0331" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d279c403f4cddc7e28c36a1def3c8083]
+reverse link Light to SwitchLight--><path codeLine="109" d="M406,390.1631 C406,390.1631 406,494.8831 406,494.8831 " fill="none" id="Light-backto-SwitchLight" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="399,390.1631,406,370.1631,413,390.1631,399,390.1631" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[fa31e174c868248651664775c33a84f6]
+reverse link Light to DimmLight--><path codeLine="110" d="M255.5,390.1631 C255.5,390.1631 255.5,481.6431 255.5,481.6431 " fill="none" id="Light-backto-DimmLight" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="248.5,390.1631,255.5,370.1631,262.5,390.1631,248.5,390.1631" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[59a457547399755f6c1a8fd4430fe473]
+link GroupSwitchLight to Group--><path codeLine="112" d="M407.5,831.0431 C407.5,831.0431 407.5,890.8731 407.5,890.8731 " fill="none" id="GroupSwitchLight-to-Group" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="414.5,890.8731,407.5,910.8731,400.5,890.8731,414.5,890.8731" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[9fb87057f9ee5fbcbec2d33f9760605e]
+link GroupDimmLight to Group--><path codeLine="113" d="M257,831.0431 C257,831.0431 257,890.8731 257,890.8731 " fill="none" id="GroupDimmLight-to-Group" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="264,890.8731,257,910.8731,250,890.8731,264,890.8731" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c108d42f92394d272c5dfea7714a31d3]
+reverse link DimmLight to Scene--><path codeLine="115" d="M284.09,488.9531 C284.09,488.9531 692.3,488.9531 692.3,488.9531 " fill="none" id="DimmLight-backto-Scene" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="271.09,488.9531,277.09,492.9531,283.09,488.9531,277.09,484.9531,271.09,488.9531" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="278.9063" y="481.2082">0..*</text><!--MD5=[d86b2517926ee9877b4b2ce5eb850dc9]
+reverse link SwitchLight to Scene--><path codeLine="116" d="M585.41,544.9531 C585.41,544.9531 692.18,544.9531 692.18,544.9531 " fill="none" id="SwitchLight-backto-Scene" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="572.41,544.9531,578.41,548.9531,584.41,544.9531,578.41,540.9531,572.41,544.9531" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="579.9307" y="541.5028">0..*</text><!--MD5=[e7025795f942b155426307dadaed7aaa]
+reverse link DimmLight to GroupDimmLight--><path codeLine="119" d="M180.5,620.1331 C180.5,620.1331 180.5,718.5831 180.5,718.5831 " fill="none" id="DimmLight-backto-GroupDimmLight" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="180.5,607.1331,176.5,613.1331,180.5,619.1331,184.5,613.1331,180.5,607.1331" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="156.2422" y="626.8926">1..*</text><!--MD5=[359905518d0e076c9c7b819347b0b231]
+reverse link SwitchLight to GroupSwitchLight--><path codeLine="120" d="M483,607.1831 C483,607.1831 483,718.8331 483,718.8331 " fill="none" id="SwitchLight-backto-GroupSwitchLight" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="483,594.1831,479,600.1831,483,606.1831,487,600.1831,483,594.1831" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="458.5938" y="614.2919">1..*</text><!--MD5=[21af629815c4ad4080e3d369a51f7b3c]
+@startuml
+' Settings
+' ============================
+
+' use +,#,- instead of icons
+'skinparam classAttributeIconSize 0
+
+' horizontal distance in px
+' skinparam nodesep 60
+
+' vertical distance in px
+' skinparam ranksep 50
+
+' use only straight lines (ortho/polyline)
+skinparam linetype ortho
+
+' title
+title 1-2-3 Light Groups
+
+skinparam nodesep 120
+skinparam ranksep 80
+
+
+' Abstract Classes
+' ============================
+class Device {
+    - app_id : Integer
+    - device_id : Integer
+    + <<create>> Device()
+    - send(id, msg)
+    - recv(id, msg)
+    + getAppID()
+    + getDeviceID()
+    + getDeviceStatus(): String
+    + processAction(&action_obj)
+}
+
+class Light {
+    + <<create>> Light()
+    -on()
+    -off()
+    + processAction(&action_obj)
+}
+
+class Group {
+    + <<create>> Group()
+    - set()
+    - unset()
+    + addLight(app_id)
+    + removeLight(app_id)
+    + processAction(&action_obj)
+}
+
+
+' Concrete Classes
+' ============================
+class SwitchLight {
+    + <<create>> SwitchLight()
+    - on()
+    - off()
+    + processAction(&action_obj)
+}
+
+class DimmLight {
+    - last_state: Integer
+
+    + <<create>> DimmLight()
+    - on(brightness)
+    - off()
+    + getLastState()
+    + processAction(&action_obj)
+}
+
+class GroupDimmLight {
+    - dimm_lights[]: Array of DimmLight Objects
+    + <<create>> GroupDimmLight()
+    - set(brightness)
+    - unset()
+    + processAction(&action_obj)
+}
+
+class GroupSwitchLight {
+    - sw_lights[]: Array of SwitchLight Objects
+    + <<create>> GroupSwitchLight()
+    - set()
+    - unset()
+    + processAction(&action_obj)
+}
+
+
+class Scene {
+    - app_id : Integer
+    - lights[]: Array of Light Objects
+    - appIdConfigDict: Dict <app_id, configuration>
+
+    + <<create>> Scene()
+    - setScene()
+    - send(id, msg)
+    - recv(id, msg)
+    + getAppID()
+    + addLight(app_id, config)
+    + removeLight(app_id)
+    + processAction(&action_obj)
+}
+
+' Relations
+' ================================
+Device <|-down- Light
+
+Light <|-down- SwitchLight
+Light <|-down- DimmLight
+
+Group <|-up- GroupSwitchLight
+Group <|-up- GroupDimmLight
+
+DimmLight "0..*" o- Scene
+SwitchLight "0..*" o- Scene
+
+' Aggregation
+DimmLight "1..*" o- - GroupDimmLight
+SwitchLight "1..*" o- - GroupSwitchLight
+
+
+@enduml
+
+@startuml
+
+
+
+
+skinparam linetype ortho
+
+title 1-2-3 Light Groups
+
+skinparam nodesep 120
+skinparam ranksep 80
+
+
+class Device {
+    - app_id : Integer
+    - device_id : Integer
+    + <<create>> Device()
+    - send(id, msg)
+    - recv(id, msg)
+    + getAppID()
+    + getDeviceID()
+    + getDeviceStatus(): String
+    + processAction(&action_obj)
+}
+
+class Light {
+    + <<create>> Light()
+    -on()
+    -off()
+    + processAction(&action_obj)
+}
+
+class Group {
+    + <<create>> Group()
+    - set()
+    - unset()
+    + addLight(app_id)
+    + removeLight(app_id)
+    + processAction(&action_obj)
+}
+
+
+class SwitchLight {
+    + <<create>> SwitchLight()
+    - on()
+    - off()
+    + processAction(&action_obj)
+}
+
+class DimmLight {
+    - last_state: Integer
+
+    + <<create>> DimmLight()
+    - on(brightness)
+    - off()
+    + getLastState()
+    + processAction(&action_obj)
+}
+
+class GroupDimmLight {
+    - dimm_lights[]: Array of DimmLight Objects
+    + <<create>> GroupDimmLight()
+    - set(brightness)
+    - unset()
+    + processAction(&action_obj)
+}
+
+class GroupSwitchLight {
+    - sw_lights[]: Array of SwitchLight Objects
+    + <<create>> GroupSwitchLight()
+    - set()
+    - unset()
+    + processAction(&action_obj)
+}
+
+
+class Scene {
+    - app_id : Integer
+    - lights[]: Array of Light Objects
+    - appIdConfigDict: Dict <app_id, configuration>
+
+    + <<create>> Scene()
+    - setScene()
+    - send(id, msg)
+    - recv(id, msg)
+    + getAppID()
+    + addLight(app_id, config)
+    + removeLight(app_id)
+    + processAction(&action_obj)
+}
+
+Device <|-down- Light
+
+Light <|-down- SwitchLight
+Light <|-down- DimmLight
+
+Group <|-up- GroupSwitchLight
+Group <|-up- GroupDimmLight
+
+DimmLight "0..*" o- Scene
+SwitchLight "0..*" o- Scene
+
+DimmLight "1..*" o- - GroupDimmLight
+SwitchLight "1..*" o- - GroupSwitchLight
+
+
+@enduml
+
+PlantUML version 1.2021.9(Sun Jul 25 12:13:56 CEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

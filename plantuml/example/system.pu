@@ -1,0 +1,206 @@
+@startuml
+' Settings
+' ============================
+
+' use +,#,- instead of icons
+'skinparam classAttributeIconSize 0
+
+' horizontal distance in px
+' skinparam nodesep 60
+
+' vertical distance in px
+' skinparam ranksep 50
+
+' use only straight lines (ortho/polyline)
+skinparam linetype ortho
+
+' title
+title 1-2-4 Smart Light System
+
+
+skinparam nodesep 80
+skinparam ranksep 60
+
+
+' Abstract Classes
+' ============================
+class ControlEntity {
+    - app_id : Integer
+    + <<create>> ControlEntity()
+    - send(id, msg)
+    - recv(id, msg)
+    + processAction(&action_obj)
+    + getAppID()
+}
+
+class Device {
+    - device_id : Integer
+    + <<create>> Device()
+    + getDeviceID()
+    + getDeviceStatus(): String
+    + processAction(&action_obj)
+}
+
+class Group {
+    + <<create>> Group()
+    - set()
+    - unset()
+    + addLight(app_id)
+    + removeLight(app_id)
+    + processAction(&action_obj)
+}
+
+class Light {
+    + <<create>> Light()
+    -on()
+    -off()
+    + processAction(&action_obj)
+}
+
+
+class Sensor {
+    + <<create>> Sensor()
+    + getInformation()
+    + processAction(&action_obj)
+}
+
+' Concrete Classes
+' ============================
+class SwitchLight {
+    + <<create>> SwitchLight()
+    - on()
+    - off()
+    + processAction(&action_obj)
+}
+
+class DimmLight {
+    - last_state: Integer
+
+    + <<create>> DimmLight()
+    - on(brightness)
+    - off()
+    + getLastState()
+    + processAction(&action_obj)
+}
+
+class GroupDimmLight {
+    - dimm_lights[]: Array of DimmLight Objects
+    + <<create>> GroupDimmLight()
+    - set(brightness)
+    - unset()
+    + processAction(&action_obj)
+}
+
+class GroupSwitchLight {
+    - sw_lights[]: Array of SwitchLight Objects
+    + <<create>> GroupSwitchLight()
+    - set()
+    - unset()
+    + processAction(&action_obj)
+}
+
+class Scene {
+    - lights[]: Array of Light Objects
+    - appIdConfigDict: Dict <app_id, configuration>
+
+    + <<create>> Scene()
+    - setScene()
+    + addLight(app_id, config)
+    + removeLight(app_id)
+    + processAction(&action_obj)
+}
+
+class DayLightSensor {
+    - brightness: Integer
+
+    + <<create>> DayLightSensor()
+    + getInformation()
+    + processAction(&action_obj)
+}
+
+class ESIApp {
+    - {static} control_mgr: ControlManager Object
+
+    + <<create>> ESIApp()
+    - processUserInput()
+    + getUserInput()
+    + checkEvents()
+
+    + createEventTrigger()
+    + createGroup()
+    + createLight()
+    + createScene()
+    + createSensor()
+
+    + configureTrigger()
+    + configureGroup()
+    + configureLight()
+    + configureScene()
+    + configureSensor()
+}
+
+class ControlManager {
+    - triggers[]: Array of Trigger Objects
+    - appIdIndexDict: Dict <app_id, index of entities array>
+    - {static} entities[]: Array of ControlEntity Objects
+    + <<create>> ControlManager()
+    - send(id, msg)
+    - recv(id, msg)
+    - checkTriggers()
+    - checkSwitchStatuses()
+    - sendControlAction(&control_obj, action_obj)
+    + addEventTrigger()
+    + removeEventTrigger(trigger_id)
+}
+
+class Trigger() {
+    - targetAppId: Integer
+    - action_obj: Action Object
+    - period_duration: Integer
+    + <<create>> Trigger(&bool_func)
+    - checkCondition(): bool
+    + returnEventTriggerStatus(): bool
+    + getPeriodDuration(): int
+}
+
+class Action() {
+    - targetAppId: Integer
+    - action_id: Integer
+    - args[]: Array
+    + <<create>> Action(action_id, args[])
+    - setTargetAppId()
+    + getTargetAppId()
+    + getActionId()
+    + getArguments()
+}
+
+' Relations
+' ================================
+Device <|-down- Light
+Device <|-down- Sensor
+
+ESIApp "1" *-down- "1" ControManager
+ESIApp " friends" .down.> ControManager
+Trigger "0..*" o-right- "1" ControManager
+Trigger "friends" <.right. ControManager
+Action "friends" <.right. Trigger
+Action "1" *-right- "1" Trigger
+
+ControlManager -down- ControlEntity : communicates >
+
+ControlEntity <|-down- Device
+ControlEntity <|-down- Group
+ControlEntity <|-down- Scene
+
+Light <|-down-- SwitchLight
+Light <|-down-- DimmLight
+
+Group <|-down-- GroupSwitchLight
+Group <|-down-- GroupDimmLight
+
+Sensor <|-down-- DayLightSensor
+
+
+@enduml
+
+

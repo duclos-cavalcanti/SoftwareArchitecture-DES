@@ -1,0 +1,124 @@
+@startuml
+' Settings
+' ============================
+
+' use +,#,- instead of icons
+'skinparam classAttributeIconSize 0
+
+' horizontal distance in px
+' skinparam nodesep 60
+
+' vertical distance in px
+' skinparam ranksep 50
+
+' use only straight lines (ortho/polyline)
+skinparam linetype ortho
+
+' title
+title 1-2-3 Light Groups
+
+skinparam nodesep 120
+skinparam ranksep 80
+
+
+' Abstract Classes
+' ============================
+class Device {
+    - app_id : Integer
+    - device_id : Integer
+    + <<create>> Device()
+    - send(id, msg)
+    - recv(id, msg)
+    + getAppID()
+    + getDeviceID()
+    + getDeviceStatus(): String
+    + processAction(&action_obj)
+}
+
+class Light {
+    + <<create>> Light()
+    -on()
+    -off()
+    + processAction(&action_obj)
+}
+
+class Group {
+    + <<create>> Group()
+    - set()
+    - unset()
+    + addLight(app_id)
+    + removeLight(app_id)
+    + processAction(&action_obj)
+}
+
+
+' Concrete Classes
+' ============================
+class SwitchLight {
+    + <<create>> SwitchLight()
+    - on()
+    - off()
+    + processAction(&action_obj)
+}
+
+class DimmLight {
+    - last_state: Integer
+
+    + <<create>> DimmLight()
+    - on(brightness)
+    - off()
+    + getLastState()
+    + processAction(&action_obj)
+}
+
+class GroupDimmLight {
+    - dimm_lights[]: Array of DimmLight Objects
+    + <<create>> GroupDimmLight()
+    - set(brightness)
+    - unset()
+    + processAction(&action_obj)
+}
+
+class GroupSwitchLight {
+    - sw_lights[]: Array of SwitchLight Objects
+    + <<create>> GroupSwitchLight()
+    - set()
+    - unset()
+    + processAction(&action_obj)
+}
+
+
+class Scene {
+    - app_id : Integer
+    - lights[]: Array of Light Objects
+    - appIdConfigDict: Dict <app_id, configuration>
+
+    + <<create>> Scene()
+    - setScene()
+    - send(id, msg)
+    - recv(id, msg)
+    + getAppID()
+    + addLight(app_id, config)
+    + removeLight(app_id)
+    + processAction(&action_obj)
+}
+
+' Relations
+' ================================
+Device <|-down- Light
+
+Light <|-down- SwitchLight
+Light <|-down- DimmLight
+
+Group <|-up- GroupSwitchLight
+Group <|-up- GroupDimmLight
+
+DimmLight "0..*" o- Scene
+SwitchLight "0..*" o- Scene
+
+' Aggregation
+DimmLight "1..*" o-- GroupDimmLight
+SwitchLight "1..*" o-- GroupSwitchLight
+
+
+@enduml
