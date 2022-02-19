@@ -3,7 +3,8 @@
 A simple project containing: 
 - cheetsheat for the the `PlantUML` language, initially based on [this](https://ogom.github.io/draw_uml/plantuml/).
 - quick main points to the use of `UML` in `OOP` development/architecture.
-- a simple example of a system and common relations between objects in the `example` folder.
+- within the `example` folder, the use of `plantuml`, common `OOP` relationships, `patterns` and even a toy smart app example which groups many of these
+topics into a single file is showcased.
 
 ## PlantUML
 
